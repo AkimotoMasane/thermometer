@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="範囲設定">
+        <EditTextPreference
+            android:key="upper"
+            android:title="上限温度"
+            android:inputType="number"
+            android:maxLength="3"
+            android:digits="0123456789-"
+            android:enabled="true"
+            android:selectable="true"
+            android:defaultValue="125"/>
+        <EditTextPreference
+            android:key="lower"
+            android:title="下限温度"
+            android:inputType="number"
+            android:maxLength="3"
+            android:digits="0123456789-"
+            android:enabled="true"
+            android:selectable="true"
+            android:defaultValue="-40"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="上限設定">
+        <SwitchPreference android:enabled="true" android:title="上限バー" android:selectable="true" android:summary="上限バーの表示オン・オフ" android:key="highbar" android:defaultValue="false"/>
+        <SwitchPreference android:enabled="true" android:title="警報" android:selectable="true" android:summary="高温警報のオン・オフ" android:key="highwarning" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="下限設定">
+        <SwitchPreference android:key="lowbar" android:title="下限バー" android:summary="下限バーの表示オン・オフ" android:enabled="true" android:selectable="true" android:defaultValue="false"/>
+        <SwitchPreference android:key="lowwarning" android:title="警報" android:summary="低温警報のオン・オフ" android:enabled="true" android:selectable="true" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
